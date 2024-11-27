@@ -22,6 +22,7 @@ colmap feature_extractor \
 --image_path ~/fountain/images              #this is where we store all of the captured images
 ```
 In this part, we actually can specify the intrinsic parameter. So, if you have your own calibration (aside from the EXIF information of the image, better to specify it here).
+
 4. Matching the images. Like its name, in this stage, we will match features between images. Let's say if we find a compatible match, we can do the triangulation later.
 ```
 colmap exhaustive_matcher \
@@ -48,6 +49,7 @@ After we run the mapper, there will be a 3 results file under the `sparse` folde
 
 ```
 If we have a huge dataset, we can use `hierarchical_mapper` instead of `mapper`. I tried it and personally not such a fan.
+
 6. Visualizing the sparse map. The 3 files under the sparse folder can be visualized using the COLMAP GUI. Using the import model menu, we can visualize the result as follows:
 
 <div style="text-align: center;">
